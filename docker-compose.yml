@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  file-api:
+    build: .
+    container_name: file-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./store:/app/store
+    environment:
+      - NODE_ENV=production
